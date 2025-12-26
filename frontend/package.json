@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/dotenv": "^6.1.1",
     "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
     "pdfjs-dist": "^5.4.449",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

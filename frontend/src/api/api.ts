@@ -1,7 +1,9 @@
 import axios from "axios";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000";
+
 export async function signPdf(signature: string, coords: any) {
-  await axios.post("http://localhost:4000/sign-pdf", {
+  return await axios.post(`${API_BASE_URL}/sign-pdf`, {
     pdfId: "sample",
     signatureImage: signature,
     fields: [coords]

@@ -1,5 +1,14 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-mongoose.connect("mongodb+srv://sumitjoshi1769_db_user:9pHkRwXXwoKOVzK3@cluster0.uzyi2mk.mongodb.net/BOLO?retryWrites=true&w=majority&appName=Cluster0");
+dotenv.config(); 
+
+const mongoURI = process.env.MONGODB_URI || "";
+
+if (!mongoURI) {
+  console.error("MONGODB_URI is not defined in .env file");
+}
+
+mongoose.connect(mongoURI);
 
 export default mongoose;
